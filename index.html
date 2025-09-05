@@ -15,9 +15,19 @@
 
   <div class="row g-3">
     <!-- اسم الطالب -->
-    <div class="col-12">
+    <div class="col-6">
       <label for="one" class="form-label">اسم الطالب</label>
       <input type="text" placeholder="اسم الطالب" class="form-control" id="one">
+    </div>
+    <div class="col-md-6">
+      <div class="mb-3">
+  <label class="form-label fw-bold">نوع الطالب</label>
+  <select id="studentType" class="form-select" onchange="renderDays()">
+    <option value="nonKhatm">غير خاتم</option>
+    <option value="khatm">خاتم</option>
+  </select>
+</div>
+
     </div>
 
     <!-- الحضور والسلوك -->
@@ -46,7 +56,7 @@
 
   <!-- ترتيب الأيام -->
   <div class="row g-3">
-    <div class="col-6 col-md-3">
+    <!-- <div class="col-6 col-md-3">
       <label for="day1" class="form-label">اليوم الأول</label>
       <input type="number" class="form-control" id="day1">
     </div>
@@ -77,7 +87,9 @@
     <div class="col-6 col-md-3">
       <label for="day8" class="form-label">اليوم الثامن</label>
       <input type="number" class="form-control" id="day8">
-    </div>
+    </div> -->
+    <div id="daysContainer" class="row g-3"></div>
+
 
     <!-- أزرار -->
     <div class="col-6">
