@@ -51,18 +51,19 @@ function displayProducts() {
 
     cartona += `
       <tr>
-        <td>${total.toFixed(2)}</td>
-        <td>${p.memory.toFixed(2)}</td>
-        <td>${p.four}</td>
-        <td>${p.five}</td>
-        <td>${p.two}</td>
-        <td>${p.three}</td>
-        <td>${p.one}</td>
+        <td>${p.one}</td>        <!-- اسم الطالب -->
+        <td>${p.three}</td>      <!-- السلوك -->
+        <td>${p.two}</td>        <!-- الحضور -->
+        <td>${p.five}</td>       <!-- التجويد -->
+        <td>${p.four}</td>       <!-- الأنشطة -->
+        <td>${p.memory.toFixed(2)}</td> <!-- الحفظ -->
+        <td>${total.toFixed(2)}</td>    <!-- الدرجة النهائية -->
       </tr>
     `;
   }
   document.getElementById('tableBody').innerHTML = cartona;
 }
+
 
 function clearProduct() {
   oneInput.value = '';

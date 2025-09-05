@@ -1,152 +1,136 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bootstrap Example</title>
+  <title>التقرير الشهري</title>
 
-  <!-- لينك CSS الخاص بـ Bootstrap -->
+  <!-- Bootstrap -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
 
-  <div class="container shadow  mt-5 p-5" style="text-align-last: right;">
-    <h2 class="text-center bg-success text-white " style="text-align-last: center;">التقرير الشهري</h2>
+<div class="container shadow mt-4 p-4">
+  <h2 class="text-center bg-success text-white p-2 rounded">التقرير الشهري</h2>
 
-    <div class="row">
-       <!-- <div class="col-md-6">
-    <label for="one" class="my-1">حلقة الشيخ</label>
-    <select id="one" class="form-control mb-2">
-    <option value="">-- حلقة الشيخ--</option>
-    <option value="عبد المنان">عبد المنان</option>
-    <option value="احمد سليم">احمد سليم</option>
-    <option value="حمزة نبيل">حمزة نبيل</option>
-    <option value="حسين">حسين</option>
-    <option value="محمد نبيل">محمد نبيل</option>
-  </select>
-      </div> -->
-      
-       <div class="col-md-12">
-    <label for="one" class="my-1">اسم الطالب</label>
-    <input type="text" placeholder="اسم الطالب" class="form-control mb-2" id="one">
-      </div>
-
-      <div class="col-md-6">
-        <label for="two" class="my-1">الحضور(20)</label>
-        <input type="number" placeholder="الحضور" class="form-control mb-2" id="two">
-      </div>
-      <div class="col-md-6">
-        <label for="three" class="my-1">السلوك(10)</label>
-        <input type="number" placeholder="السلوك" class="form-control mb-2" id="three">
-      </div>
-      <div class="col-md-6">
-        <label for="four" class="my-1">الأنشطة(5)</label>
-        <input type="number" placeholder="الأنشطة" class="form-control mb-2" id="four">
-      </div>
-      <div class="col-md-6">
-        <label for="five" class="my-1">التجويد(5)</label>
-        <input type="number" placeholder="التجويد" class="form-control mb-2" id="five">
-      </div>
+  <div class="row g-3">
+    <!-- اسم الطالب -->
+    <div class="col-12">
+      <label for="one" class="form-label">اسم الطالب</label>
+      <input type="text" placeholder="اسم الطالب" class="form-control" id="one">
     </div>
 
-    <hr/>
-    <h2 class="text-center">الحفظ(60)</h2>
-    <div class="row">
-      
-      <div class="col-md-6">
-        <label for="day2" class="my-1">اليوم الثاني</label>
-        <input type="number" placeholder="اليوم الثاني" class="form-control mb-2" id="day2">
-      </div>
-      <div class="col-md-6">
-        <label for="day1" class="my-1">اليوم الأول</label>
-        <input type="number" placeholder="اليوم الأول" class="form-control mb-2" id="day1">
-      </div>
-
-      
-      <div class="col-md-6">
-        <label for="day4" class="my-1">اليوم الرابع</label>
-        <input type="number" placeholder="اليوم الرابع" class="form-control mb-2" id="day4">
-      </div>
-      <div class="col-md-6">        
-        <label for="day3" class="my-1">اليوم الثالث</label>
-        <input type="number" placeholder="اليوم الثالث" class="form-control mb-2" id="day3">
-      </div>
-      
-      
-      <div class="col-md-6">
-        <label for="day6" class="my-1">اليوم السادس</label>
-        <input type="number" placeholder="اليوم السادس" class="form-control mb-2" id="day6">
-      </div>
-      <div class="col-md-6">
-        <label for="day5" class="my-1">اليوم الخامس</label>
-        <input type="number" placeholder="اليوم الخامس" class="form-control mb-2" id="day5">
-      </div>
-
-      <div class="col-md-6">
-        <label for="day8" class="my-1">اليوم الثامن</label>
-        <input type="number" placeholder="اليوم الثامن" class="form-control mb-2" id="day8">
-      </div>
-      <div class="col-md-6">
-        <label for="day7" class="my-1">اليوم السابع</label>
-        <input type="number" placeholder="اليوم السابع" class="form-control mb-2" id="day7">
-      </div>
-      
-      <div class="col-md-6">
-        <button class="btn btn-success w-100" style="text-align-last: center;" onclick="addProduct()">التقرير الشهري</button>
-      </div>
-      <div class="col-md-6">
-        <button class="btn btn-success w-100" style="text-align-last: center;" onclick="Result()">نتيجة الحفظ</button>
-      </div>
+    <!-- الحضور والسلوك -->
+    <div class="col-6 col-md-6">
+      <label for="two" class="form-label">الحضور (20)</label>
+      <input type="number" class="form-control" id="two">
     </div>
-   
+    <div class="col-6 col-md-6">
+      <label for="three" class="form-label">السلوك (10)</label>
+      <input type="number" class="form-control" id="three">
+    </div>
 
-    <label for="productPrice" class="my-1">نتيجة الطالب</label>
-    <h5 id="result"></h5>
-
-  </div>
-    <div class="w-75 mx-auto">
-    <h2 class="text-center">التقرير الشهري</h2>
-     <table class="table table-center table-primary text-center" >
-        <thead>
-          <th>الدرجة النهائية</th>
-          <th>الحفظ(60)</th>
-          <th>الأنشطة(5)</th>
-          <th>التجويد(5)</th>
-          <th>الحضور(20)</th>
-          <th>السلوك(10)</th>
-          <th>اسم الطالب</th>
-        </thead>
-        <tbody id="tableBody">
-          
-        </tbody>
-     </table>
-     <div class="row">
-      <div class="col-md-6">
-        <div class="w-100 mx-auto text-center mb-4">
-       <button class="btn btn-success" onclick="sortProducts()">ترتيب حسب الدرجات</button>
-       </div>
-      </div>
-      <div class="col-md-6">
-        <div class="w-100 mx-auto text-center mb-4">
-          <button class="btn btn-danger" onclick="downloadTableAsPDF()">تحميل التقرير</button>
-        </div>
-
-      </div>
-     </div>
-
-
+    <!-- الأنشطة والتجويد -->
+    <div class="col-6 col-md-6">
+      <label for="four" class="form-label">الأنشطة (5)</label>
+      <input type="number" class="form-control" id="four">
+    </div>
+    <div class="col-6 col-md-6">
+      <label for="five" class="form-label">التجويد (5)</label>
+      <input type="number" class="form-control" id="five">
+    </div>
   </div>
 
-  <!-- سكربت JavaScript الخاص بـ Bootstrap -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <!--  -->
-<!-- jspdf -->
+  <hr>
+  <h4 class="text-center">الحفظ (60)</h4>
 
+  <!-- ترتيب الأيام -->
+  <div class="row g-3">
+    <div class="col-6 col-md-3">
+      <label for="day1" class="form-label">اليوم الأول</label>
+      <input type="number" class="form-control" id="day1">
+    </div>
+    <div class="col-6 col-md-3">
+      <label for="day2" class="form-label">اليوم الثاني</label>
+      <input type="number" class="form-control" id="day2">
+    </div>
+    <div class="col-6 col-md-3">
+      <label for="day3" class="form-label">اليوم الثالث</label>
+      <input type="number" class="form-control" id="day3">
+    </div>
+    <div class="col-6 col-md-3">
+      <label for="day4" class="form-label">اليوم الرابع</label>
+      <input type="number" class="form-control" id="day4">
+    </div>
+    <div class="col-6 col-md-3">
+      <label for="day5" class="form-label">اليوم الخامس</label>
+      <input type="number" class="form-control" id="day5">
+    </div>
+    <div class="col-6 col-md-3">
+      <label for="day6" class="form-label">اليوم السادس</label>
+      <input type="number" class="form-control" id="day6">
+    </div>
+    <div class="col-6 col-md-3">
+      <label for="day7" class="form-label">اليوم السابع</label>
+      <input type="number" class="form-control" id="day7">
+    </div>
+    <div class="col-6 col-md-3">
+      <label for="day8" class="form-label">اليوم الثامن</label>
+      <input type="number" class="form-control" id="day8">
+    </div>
+
+    <!-- أزرار -->
+    <div class="col-6">
+      <button class="btn btn-success w-100" onclick="addProduct()">إضافة للتقرير</button>
+    </div>
+    <div class="col-6">
+      <button class="btn btn-info w-100" onclick="Result()">نتيجة الحفظ</button>
+    </div>
+  </div>
+
+  <label class="mt-3">نتيجة الطالب</label>
+  <h5 id="result"></h5>
+</div>
+
+<!-- الجدول -->
+<div class="container mt-4">
+  <h3 class="text-center">التقرير الشهري</h3>
+  <div class="table-responsive">
+    <table class="table table-bordered table-primary text-center">
+      <thead>
+  <tr>
+    <th>اسم الطالب</th>
+    <th>السلوك (10)</th>
+    <th>الحضور (20)</th>
+    <th>التجويد (5)</th>
+    <th>الأنشطة (5)</th>
+    <th>الحفظ (60)</th>
+    <th>الدرجة النهائية</th>
+  </tr>
+</thead>
+
+      <tbody id="tableBody"></tbody>
+    </table>
+  </div>
+
+  <div class="row text-center">
+    <div class="col-6">
+      <button class="btn btn-success w-100" onclick="sortProducts()">ترتيب حسب الدرجات</button>
+    </div>
+    <div class="col-6">
+      <button class="btn btn-danger w-100" onclick="downloadTableAsPDF()">تحميل التقرير</button>
+    </div>
+  </div>
+</div>
+
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- مكتبات التحميل -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 
-<!-- كودك -->
-  <!-- ملف JavaScript بتاعك -->
-  <script src="learn.js"></script>
+<script src="learn.js"></script>
 </body>
 </html>
