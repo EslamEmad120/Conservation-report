@@ -1,0 +1,183 @@
+(1) دالة تستخدم لتعرض شيء للمبرمج
+console.log("Hello");
+----------------------------
+(2)
+document.getElementById('demo').innerHTML = 'Hello'
+----------------------------
+(3) تحدي 1
+let x = 10 , y = 4
+let z1 = x + y
+let z2 = x - y
+let z3 = x * y
+let z4 = x / y
+let z5 = x % y
+console.log("Sum is "+ z1);
+console.log("Sum is "+ z2);
+console.log("Sum is "+ z3);
+console.log("Sum is "+ z4);
+console.log("Sum is "+ z5);
+document.getElementById('h1').innerHTML = `Sum is ${z1}`;
+document.getElementById('h2').innerHTML = `Sum is ${z2}`;
+document.getElementById('h3').innerHTML = `Sum is ${z3}`;
+document.getElementById('h4').innerHTML = `Sum is ${z4}`;
+document.getElementById('h5').innerHTML = `Sum is ${z5}`;
+-------------------------------
+let title = 'hello'
+console.log(title.substring(1,5));
+title.length()
+title.toUpperCase()
+title.toLowerCase()
+title.replace("l","r")
+title.charAt(1)
+title[]
+revese
+--------------------------------
+(2) ازاي تعكس نص
+let x = 'Hello world'
+// task one
+let z1 = x.toUpperCase();
+console.log(z1);
+// task two
+let z2 = x.replace('o','y')
+console.log(z2);
+// task three
+let z3 = x.split('').reverse('').join('')
+console.log(z3);
+splite => string to arr
+reverse => reverse in arr
+join => arr to string
+-------------------------------------
+عكس نص واظهاره للمستخدم
+let data = document.getElementById('hello').innerText
+let z4 = data.split('').reverse('').join('')
+let type = document.getElementById('type').innerHTML = z4
+console.log(z4);
+-------------------------------------
+عكس النص الي المستخدم هيكتبه في ال input
+function read() {
+    let inp = document.getElementById('inp').value;
+    let z5 = inp.split('').reverse('').join('')
+    let type = document.getElementById('type').innerHTML = z5
+    console.log(z5);
+}
+
+let button = document.getElementById('button')
+-------------------------------------
+Math fun:
+Math.min(7,4,2)
+Math.max(7,4,2)
+-------------------------------------
+Casting
+Number(n)
+-------------------------------------
+function read() {
+    let inp = document.getElementById('inp').value;
+    let z5 = inp.split('').reverse('').join('')
+    let type = document.getElementById('type').innerHTML = z5
+    console.log(z5);
+}
+
+let button = document.getElementById('button')
+console.log(Math.min(7,4,2));
+--------------------------------------
+BMI
+
+function calc(){
+    let inp = document.getElementById('inp');
+   let height = parseFloat(document.getElementById('height').value) / 100; 
+let width = parseFloat(document.getElementById('width').value);
+    let mass = width / (height * height);
+    console.log(mass);
+    
+    if(mass<18){
+        let Result =document.getElementById('Result').innerHTML = 'نحافة'
+    }
+    else if(mass>=18 && mass < 24.9){
+        let Result =document.getElementById('Result').innerHTML = 'وزن مثالي'
+    }
+    else if(mass>=25 && mass < 29.9){
+        let Result =document.getElementById('Result').innerHTML = 'وزن زائد'
+    }
+    else if(mass>=30 && mass < 34.9){
+        let Result =document.getElementById('Result').innerHTML = 'سمنة درجة اولى'
+    }
+    else if(mass>=35 && mass < 39.9){
+        let Result =document.getElementById('Result').innerHTML = 'سمنة درجة ثانية'
+    } 
+    else if(mass>=40) {
+        let Result =document.getElementById('Result').innerHTML = 'سمنة مفرطة'
+    }
+    else{
+        let Result =document.getElementById('Result').innerHTML = 'خطأ'
+    }
+}
+-----------------------------------
+Array:
+student = ['ali','ahmed'];
+student.push('yomna');
+srudent[1] = 'Ammar';
+student.pop()
+student.splice(1,2)
+
+ex: push pop element
+let student = ['ali ','aya ']
+function calc(){
+    let inp = document.getElementById('inp');
+   let height = document.getElementById('height').value; 
+   student.push(height);
+   let Result = document.getElementById('Result').innerHTML = student;
+    console.log(student);   
+}
+function del(){
+    let inp = document.getElementById('inp');
+   let height = document.getElementById('height').value; 
+   student.pop();
+   let Result = document.getElementById('Result').innerHTML = student;
+    console.log(student);   
+}
+------------------------
+جدول عشره
+let output='';
+for(let i = 0 ; i<=30 ; i++){
+    output += `10 * ${i} = ${10*i} <br>` 
+    
+}
+let Result = document.getElementById('Result').innerHTML = output;
+------------------------
+if name in arr
+
+let student = ['ali','ahmed','aya','ayman']
+let Result1 = document.getElementById('Result1').innerHTML = student;
+// let Result = document.getElementById('Result').innerHTML
+function calc(){
+   let height = document.getElementById('height').value; 
+   let output = ""
+   let solution = false
+   for (let i=0 ; i<student.length;i++){
+      if(height == student[i]){
+         solution = true
+         break;
+      } 
+      else {
+         solution = false
+         
+      }
+      
+      
+   }
+   if(solution){
+   let Result = document.getElementById('Result').innerHTML = 'yes';
+   console.log('yes');
+} else {
+   let Result = document.getElementById('Result').innerHTML = 'no';
+   console.log('no');
+   
+}
+-------------------------
+functions: re use code
+expressoin function ميتعملهاش هويستنج يعني ميطلعش فوق var - let
+decleration function بتطلع فوق تحت اخر فانكشن
+
+self invoked function فانكشن بتكبتها من غير اسم بتكوول نفسها بنفسها 
+فايدتها لو عايز اخلي الكود في لوكل اسكوب
+
